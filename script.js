@@ -1,3 +1,117 @@
+const Gender = Object.freeze({
+  "Male" = 0,
+  "Female" = 1,
+  "Diverse" = 2
+});
+
+const Status = Object.freeze({
+  "Alive" = 0,
+  "Dead" = 1,
+  "Unknown" = 2
+});
+
+const Race = Object.freeze({
+  "Human" = 0,
+  "Fishman" = 1,
+  "Giant" = 2
+});
+
+const Devilfruit = Object.freeze({
+  "None" = 0,
+  "Paramecia" = 1,
+  "Zoan" = 2,
+  "Logia" = 3
+});
+
+const Crew = Object.freeze({
+  STRAWHAT_PIRATES: 0,
+  MARINE: 1,
+  REVOLUTIONARY_ARMY: 2,
+  RED_HAIR_PIRATES: 3,
+  BLACKBEARD_PIRATES: 4,
+  HEART_PIRATES: 5,
+  KID_PIRATES: 6,
+  BIG_MOM_PIRATES: 7,
+  BEASTS_PIRATES: 8,
+  CROSS_GUILD: 9,
+  BAROQUE_WORKS: 10,
+  CP9: 11,
+  CP0: 12,
+  WHITEBEARD_PIRATES: 13,
+  ROGER_PIRATES: 14,
+  DONQUIXOTE_PIRATES: 15,
+  KUJA_PIRATES: 16,
+  ARLONG_PIRATES: 17,
+  THRILLER_BARK_CREW: 18,
+  SHICHIBUKAI: 19,
+  WORLD_GOVERNMENT: 20,
+  GIANT_WARRIORS_PIRATES: 21,
+  RUMBAR_PIRATES: 22,
+  NEO_MARINE: 23,
+  SUN_PIRATES: 24,
+  HAPPO_NAVY: 25,
+  GERMA_66: 26,
+  FIRE_TANK_PIRATES: 27,
+  ON_AIR_PIRATES: 28,
+  BEAUTY_PIRATES: 29,
+  BONNEY_PIRATES: 30,
+  ALVIDA_PIRATES: 31,
+  BUGGY_PIRATES: 32
+});
+
+const CrewName = Object.freeze({
+  [Crew.BUGGY_PIRATES]: "Buggy Pirates",
+  [Crew.ALVIDA_PIRATES]: "Alvida Pirates",
+  [Crew.STRAWHAT_PIRATES]: "Straw Hat Pirates",
+  [Crew.MARINE]: "Marines",
+  [Crew.REVOLUTIONARY_ARMY]: "Revolutionary Army",
+  [Crew.RED_HAIR_PIRATES]: "Red-Hair Pirates",
+  [Crew.BLACKBEARD_PIRATES]: "Blackbeard Pirates",
+  [Crew.HEART_PIRATES]: "Heart Pirates",
+  [Crew.KID_PIRATES]: "Kid Pirates",
+  [Crew.BIG_MOM_PIRATES]: "Big Mom Pirates",
+  [Crew.BEASTS_PIRATES]: "Beasts Pirates",
+  [Crew.CROSS_GUILD]: "Cross Guild",
+  [Crew.BAROQUE_WORKS]: "Baroque Works",
+  [Crew.CP9]: "CP9",
+  [Crew.CP0]: "CP0",
+  [Crew.WHITEBEARD_PIRATES]: "Whitebeard Pirates",
+  [Crew.ROGER_PIRATES]: "Roger Pirates",
+  [Crew.DONQUIXOTE_PIRATES]: "Donquixote Pirates",
+  [Crew.KUJA_PIRATES]: "Kuja Pirates",
+  [Crew.ARLONG_PIRATES]: "Arlong Pirates",
+  [Crew.THRILLER_BARK_CREW]: "Thriller Bark Pirates",
+  [Crew.SHICHIBUKAI]: "Shichibukai",
+  [Crew.WORLD_GOVERNMENT]: "World Government",
+  [Crew.GIANT_WARRIORS_PIRATES]: "Giant Warrior Pirates",
+  [Crew.RUMBAR_PIRATES]: "Rumbar Pirates",
+  [Crew.NEO_MARINE]: "Neo Marine",
+  [Crew.SUN_PIRATES]: "Sun Pirates",
+  [Crew.HAPPO_NAVY]: "Happo Navy",
+  [Crew.GERMA_66]: "Germa 66",
+  [Crew.FIRE_TANK_PIRATES]: "Fire Tank Pirates",
+  [Crew.ON_AIR_PIRATES]: "On-Air Pirates",
+  [Crew.BEAUTY_PIRATES]: "Beauty Pirates",
+  [Crew.BONNEY_PIRATES]: "Bonney Pirates"
+});
+
+
+const Origin = Object.freeze({
+  EAST_BLUE: 0,
+  WEST_BLUE: 1,
+  SOUTH_BLUE: 2,
+  NORTH_BLUE: 3,
+  GRANDLINE: 4
+});
+
+const OriginName = Object.freeze({
+  [Origin.EAST_BLUE]: "East Blue",
+  [Origin.WEST_BLUE]: "West Blue",
+  [Origin.SOUTH_BLUE]: "South Blue",
+  [Origin.NORTH_BLUE]: "North Blue",
+  [Origin.GRANDLINE]: "Grandline"
+});
+  
 const Saga = Object.freeze({
   "East Blue" = 0,
   "Alabasta" = 1,
@@ -161,6 +275,12 @@ const SagaArcs = Object.freeze({
     Arc.ELBAPH
   ]
 });
+
+let characters = [];
+
+fetch('characters.json')
+  .then(data => characters = data.characters);
+
 
 
 
