@@ -1,4 +1,4 @@
-export const Saga = Object.freeze({
+const Saga = Object.freeze({
   "East Blue" = 0,
   "Alabasta" = 1,
   "Sky Island" = 2,
@@ -11,7 +11,7 @@ export const Saga = Object.freeze({
   "Wano Country" = 9,
   "Final" = 10
 });
-export const Arc = Object.freeze({
+const Arc = Object.freeze({
   //East Blue
   ROMANCE_DAWN: 0,
   ORANGE_TOWN: 1,
@@ -36,13 +36,13 @@ export const Arc = Object.freeze({
   //Thriller Bark
   THRILLER_BARK: 40,
   //Summit War
-  SABODY_ARCHIPELAGO: 50,
+  SABAODY_ARCHIPELAGO: 50,
   AMAZON_LILY: 51,
   IMPEL_DOWN: 52,
   MARINEFORD: 53,
   POST_WAR: 54,
   //Fishman Island
-  RETURN_TO_SABODY: 60,
+  RETURN_TO_SABAODY: 60,
   FISHMAN_ISLAND: 61,
   //Dressrosa
   PUNK_HAZARD: 70,
@@ -58,7 +58,7 @@ export const Arc = Object.freeze({
   ELBAPH: 101
 });
 
-export const ArcName = Object.freeze({
+const ArcName = Object.freeze({
   [Arc.ROMANCE_DAWN]: "Romance Dawn",
   [Arc.ORANGE_TOWN]: "Orange Town",
   [Arc.SYRUP_VILLAGE]: "Syrup Village",
@@ -82,13 +82,13 @@ export const ArcName = Object.freeze({
 
   [Arc.THRILLER_BARK]: "Thriller Bark",
 
-  [Arc.SABODY_ARCHIPELAGO]: "Sabaody Archipelago",
+  [Arc.SABAODY_ARCHIPELAGO]: "Sabaody Archipelago",
   [Arc.AMAZON_LILY]: "Amazon Lily",
   [Arc.IMPEL_DOWN]: "Impel Down",
   [Arc.MARINEFORD]: "Marineford",
   [Arc.POST_WAR]: "Post-War",
 
-  [Arc.RETURN_TO_SABODY]: "Return to Sabaody",
+  [Arc.RETURN_TO_SABAODY]: "Return to Sabaody",
   [Arc.FISHMAN_ISLAND]: "Fish-Man Island",
 
   [Arc.PUNK_HAZARD]: "Punk Hazard",
@@ -104,7 +104,7 @@ export const ArcName = Object.freeze({
   [Arc.ELBAPH]: "Elbaph"
 });
 
-export const SagaArcs = Object.freeze({
+const SagaArcs = Object.freeze({
   "East Blue": [
     Arc.ROMANCE_DAWN,
     Arc.ORANGE_TOWN,
@@ -134,14 +134,14 @@ export const SagaArcs = Object.freeze({
     Arc.THRILLER_BARK
   ],
   "Summit War": [
-    Arc.SABODY_ARCHIPELAGO,
+    Arc.SABAODY_ARCHIPELAGO,
     Arc.AMAZON_LILY,
     Arc.IMPEL_DOWN,
     Arc.MARINEFORD,
     Arc.POST_WAR
   ],
   "Fish-Man Island": [
-    Arc.RETURN_TO_SABODY,
+    Arc.RETURN_TO_SABAODY,
     Arc.FISHMAN_ISLAND
   ],
   "Dressrosa": [
@@ -161,6 +161,7 @@ export const SagaArcs = Object.freeze({
     Arc.ELBAPH
   ]
 });
+
 
 
 
