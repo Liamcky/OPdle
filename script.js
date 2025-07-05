@@ -23,6 +23,14 @@ const Devilfruit = Object.freeze({
   "Logia" = 3
 });
 
+const Haki = Object.freeze({
+  NONE: 0,
+  OBSERVATION: 1,
+  ARMAMENT: 2,
+  BOTH: 3,
+  CONQUEROR: 4
+});
+
 const Crew = Object.freeze({
   STRAWHAT_PIRATES: 0,
   MARINE: 1,
