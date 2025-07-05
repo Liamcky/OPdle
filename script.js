@@ -1,26 +1,26 @@
 const Gender = Object.freeze({
-  "Male" = 0,
-  "Female" = 1,
-  "Diverse" = 2
+  Male: 0,
+  Female: 1,
+  Others: 2
 });
 
 const Status = Object.freeze({
-  "Alive" = 0,
-  "Dead" = 1,
-  "Unknown" = 2
+  Alive: 0,
+  Dead: 1,
+  Unknown: 2
 });
 
 const Race = Object.freeze({
-  "Human" = 0,
-  "Fishman" = 1,
-  "Giant" = 2
+  Human: 0,
+  Fishman: 1,
+  Giant: 2
 });
 
 const Devilfruit = Object.freeze({
-  "None" = 0,
-  "Paramecia" = 1,
-  "Zoan" = 2,
-  "Logia" = 3
+  None: 0,
+  Paramecia: 1,
+  Zoan: 2,
+  Logia: 3
 });
 
 const Haki = Object.freeze({
@@ -121,18 +121,19 @@ const OriginName = Object.freeze({
 });
   
 const Saga = Object.freeze({
-  "East Blue" = 0,
-  "Alabasta" = 1,
-  "Sky Island" = 2,
-  "Water 7" = 3,
-  "Thriller Bark" = 4,
-  "Summit War" = 5,
-  "Fish-Man Island" = 6,
-  "Dressrosa" = 7,
-  "Whole Cake Island" = 8,
-  "Wano Country" = 9,
-  "Final" = 10
+  "East Blue": 0,
+  "Alabasta": 1,
+  "Sky Island": 2,
+  "Water 7": 3,
+  "Thriller Bark": 4,
+  "Summit War": 5,
+  "Fish-Man Island": 6,
+  "Dressrosa": 7,
+  "Whole Cake Island": 8,
+  "Wano Country": 9,
+  "Final": 10
 });
+
 const Arc = Object.freeze({
   //East Blue
   ROMANCE_DAWN: 0,
