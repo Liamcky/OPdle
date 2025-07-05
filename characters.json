@@ -128,5 +128,57 @@
     "origin": 0,
     "status": 0,
     "race": 0
+  },
+  {
+    "name": "Shanks",
+    "gender": 0,
+    "arc": 0,
+    "devilfruit": 0,
+    "crew": 3,
+    "haki": 4,
+    "bounty": 4048900000,
+    "height": 1.99,
+    "origin": 0,
+    "status": 0,
+    "race": 0
+  },
+  {
+    "name": "Lucky Roux",
+    "gender": 0,
+    "arc": 0,
+    "devilfruit": 0,
+    "crew": 3,
+    "haki": 2,
+    "bounty": 0,
+    "height": 1.75,
+    "origin": 0,
+    "status": 0,
+    "race": 0
+  },
+  {
+    "name": "Ben Beckman",
+    "gender": 0,
+    "arc": 0,
+    "devilfruit": 0,
+    "crew": 3,
+    "haki": 2,
+    "bounty": 0,
+    "height": 2.06,
+    "origin": 0,
+    "status": 0,
+    "race": 0
+  },
+  {
+    "name": "Yasopp",
+    "gender": 0,
+    "arc": 0,
+    "devilfruit": 0,
+    "crew": 3,
+    "haki": 1,
+    "bounty": 0,
+    "height": 1.83,
+    "origin": 0,
+    "status": 0,
+    "race": 0
   }
 ]
