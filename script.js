@@ -13,7 +13,8 @@ const Status = Object.freeze({
 const Race = Object.freeze({
   Human: 0,
   Fishman: 1,
-  Giant: 2
+  Giant: 2,
+  SeaKing: 3
 });
 
 const Devilfruit = Object.freeze({
