@@ -64,7 +64,9 @@ const Crew = Object.freeze({
   BEAUTY_PIRATES: 29,
   BONNEY_PIRATES: 30,
   ALVIDA_PIRATES: 31,
-  BUGGY_PIRATES: 32
+  BUGGY_PIRATES: 32,
+  DON_KRIEG_PIRATES: 33,
+  NONE: 34
 });
 
 const CrewName = Object.freeze({
