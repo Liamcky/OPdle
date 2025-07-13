@@ -404,13 +404,11 @@ function validateCharacter(guess) {
     } else if (key === "haki") {
            if (guessValue === targetValue) {
            li.classList.add("correct");
-           } else if ((guessValue & targetValue) === targetValue) {
+           } else if ((guessValue & targetValue) === targetValue | (guessValue & targetValue) !== 0) {
              li.classList.add("semicorrect");
-             } else if ((guessValue & targetValue) !== 0) {
-                    li.classList.add("semicorrect");
              } else {
                li.classList.add("incorrect");
-                    }
+               }
     } else {
       if (guessValue === targetValue) {
         li.classList.add("correct");
