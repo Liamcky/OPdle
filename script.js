@@ -373,7 +373,7 @@ function validateCharacter(guess) {
     const targetValue = target[key];
     const guessValue = guess[key];
 
-    let displayValue = guessValue;
+    let displayValue = resolveValue(key, guessValue);
 
     li.innerHTML = `<span>${label}</span><span>${displayValue}</span>`;
 
