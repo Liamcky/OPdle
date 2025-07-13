@@ -25,11 +25,10 @@ const Devilfruit = Object.freeze({
 });
 
 const Haki = Object.freeze({
-  None: 0,
-  Observation: 1,
-  Armanent: 2,
-  Both: 3,
-  Conqueror: 4
+  NONE: 0,
+  OBSERVATION: 1 << 0,
+  ARMAMENT: 1 << 1,
+  CONQUEROR: 1 << 2
 });
 
 const Crew = Object.freeze({
@@ -355,10 +354,19 @@ function resolveValue(key, value) {
     case "devilfruit":
       return Object.keys(Devilfruit).find(k => Devilfruit[k] === value);
     case "haki":
-      return Object.keys(Haki).find(k => Haki[k] === value);
+      return hakiToString(value);
     default:
       return value;
   }
+}
+
+function hakiToString(value) {
+  if (value === 0) return "None";
+  const types = [];
+  if (value & Haki.OBSERVATION) types.push("Observation");
+  if (value & Haki.ARMAMENT) types.push("Armament");
+  if (value & Haki.CONQUEROR) types.push("Conqueror");
+  return types.join(", ");
 }
 
 function validateCharacter(guess) {
@@ -393,14 +401,24 @@ function validateCharacter(guess) {
         li.classList.add("lower");
         li.innerHTML += " 🔺";
       }
-    } else {
+    } else if (key === "haki") {
+           if (guessValue === targetValue) {
+           li.classList.add("correct");
+           } else if ((guessValue & targetValue) === targetValue) {
+             li.classList.add("higher");
+             li.innerHTML += " 🔽";
+             } else if ((guessValue & targetValue) !== 0) {
+                    li.classList.add("semicorrect");
+             } else {
+               li.classList.add("incorrect");
+                    }
+    } else {
       if (guessValue === targetValue) {
         li.classList.add("correct");
       } else {
         li.classList.add("incorrect");
       }
     }
-
     ul.appendChild(li);
   }
 
