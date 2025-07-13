@@ -383,7 +383,7 @@ function validateCharacter(guess) {
 
     li.innerHTML = `<span>${label}</span><span>${displayValue}</span>`;
 
-    if (key === "bounty" || key === "height") {
+    if (key === "bounty" || key === "height" || key === "arc") {
       if (guessValue === targetValue) {
         li.classList.add("correct");
       } else if (guessValue > targetValue) {
