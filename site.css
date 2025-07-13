@@ -62,6 +62,10 @@ input[type="text"] {
   background-color: #1f883d;
 }
 
+.semicorrect{
+  background-color: #ffbf00;
+}
+
 .incorrect {
   background-color: #da3633;
 }
