@@ -388,10 +388,10 @@ function validateCharacter(guess) {
         li.classList.add("correct");
       } else if (guessValue > targetValue) {
         li.classList.add("higher");
-        li.innerHTML += " 🔽";
+        li.innerHTML += " 🔻";
       } else {
         li.classList.add("lower");
-        li.innerHTML += " 🔼";
+        li.innerHTML += " 🔺";
       }
     } else {
       if (guessValue === targetValue) {
