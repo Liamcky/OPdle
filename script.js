@@ -299,7 +299,7 @@ fetch('characters.json')
 
 const search = document.getElementById("search");
 const suggestions = document.getElementById("suggestions");
-const resultContainer = document.getElementById("result-container");
+const results = document.getElementById("results");
 const targetName = document.getElementById("target-name");
 const attributeList = document.getElementById("attribute-list");
 
@@ -356,41 +356,54 @@ function resolveValue(key, value) {
 }
 
 function validateCharacter(guess) {
-  resultContainer.classList.remove("hidden");
-  targetName.textContent = target.name;
-  attributeList.innerHTML = "";
+  const container = document.createElement("div");
+  container.classList.add("result-container");
 
-  for (const key in attributeLabels) {
-    const li = document.createElement("li");
-    const label = attributeLabels[key];
-    const targetValue = target[key];
-    const guessValue = guess[key];
+  const nameHeader = document.createElement("h3");
+  nameHeader.textContent = guess.name;
+  container.appendChild(nameHeader);
 
-    const displayValue = resolveValue(key, guessValue);
+  const ul = document.createElement("ul");
+  ul.classList.add("attribute-list");
 
-li.innerHTML = `<span>${label}</span><span>${displayValue}</span>`;
+  for (const key in attributeLabels) {
+    const li = document.createElement("li");
+    const label = attributeLabels[key];
+    const targetValue = target[key];
+    const guessValue = guess[key];
 
-    if (key === "bounty" || key === "height") {
-      if (guessValue === targetValue) {
-        li.classList.add("correct");
-      } else if (guessValue > targetValue) {
-        li.classList.add("higher");
-        li.innerHTML += " 🔽";
-      } else {
-        li.classList.add("lower");
-        li.innerHTML += " 🔼";
-      }
-    } else {
-      if (guessValue === targetValue) {
-        li.classList.add("correct");
-      } else {
-        li.classList.add("incorrect");
-      }
-    }
+    let displayValue = guessValue;
 
-    attributeList.appendChild(li);
-  }
+    li.innerHTML = `<span>${label}</span><span>${displayValue}</span>`;
+
+    if (key === "bounty" || key === "height") {
+      if (guessValue === targetValue) {
+        li.classList.add("correct");
+      } else if (guessValue > targetValue) {
+        li.classList.add("higher");
+        li.innerHTML += " 🔽";
+      } else {
+        li.classList.add("lower");
+        li.innerHTML += " 🔼";
+      }
+    } else {
+      if (guessValue === targetValue) {
+        li.classList.add("correct");
+      } else {
+        li.classList.add("incorrect");
+      }
+    }
+
+    ul.appendChild(li);
+  }
+
+  container.appendChild(ul);
+  results.prepend(container); // ⬅ neueste oben
+
+  // Suchfeld zurücksetzen
+  search.value = "";
 }
+
 
 
 
