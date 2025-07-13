@@ -334,6 +334,26 @@ search.addEventListener("input", () => {
     suggestions.appendChild(li);
   });
 });
+function resolveValue(key, value) {
+  switch (key) {
+    case "crew":
+      return CrewName[value] ?? "Unknown";
+    case "origin":
+      return OriginName[value] ?? "Unknown";
+    case "arc":
+      return ArcName[value] ?? "Unknown";
+    case "gender":
+      return Object.keys(Gender).find(k => Gender[k] === value);
+    case "status":
+      return Object.keys(Status).find(k => Status[k] === value);
+    case "devilfruit":
+      return Object.keys(Devilfruit).find(k => Devilfruit[k] === value);
+    case "haki":
+      return Object.keys(Haki).find(k => Haki[k] === value);
+    default:
+      return value;
+  }
+}
 
 function validateCharacter(guess) {
   resultContainer.classList.remove("hidden");
@@ -346,7 +366,9 @@ function validateCharacter(guess) {
     const targetValue = target[key];
     const guessValue = guess[key];
 
-    li.innerHTML = `<span>${label}</span><span>${guessValue}</span>`;
+    const displayValue = resolveValue(key, guessValue);
+
+li.innerHTML = `<span>${label}</span><span>${displayValue}</span>`;
 
     if (key === "bounty" || key === "height") {
       if (guessValue === targetValue) {
