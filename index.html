@@ -1,14 +1,24 @@
-<html>
-  <main>
-    
-  </main>
-  <body>
-    <h1> OnePiedly</h1>
-    <div class="container">
-      <div class="search">
-        <div class="view">          
-        </div>
-      </div>
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>OnePiecele</title>
+  <link rel="stylesheet" href="site.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>One Piece Character Quiz</h1>
+
+    <input type="text" id="search" placeholder="search character..." autocomplete="off" />
+    <ul id="suggestions" class="suggestions"></ul>
+
+    <div id="result-container" class="hidden">
+      <h2>Guess comparison<span id="target-name"></span></h2>
+      <ul class="attribute-list" id="attribute-list"></ul>
     </div>
-  </body>
+  </div>
+
+  <script src="script.js"></script>
+</body>
 </html>
