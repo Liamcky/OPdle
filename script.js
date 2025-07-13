@@ -424,6 +424,21 @@ function validateCharacter(guess) {
 
   // Suchfeld zurücksetzen
   search.value = "";
+
+  const allCorrect = Object.keys(attributeLabels).every(
+  key => guess[key] === target[key]
+  );
+
+  if (allCorrect) {
+    search.disabled = true;
+    search.placeholder = "🎉 Vollständig gelöst!";
+    const restartBtn = document.createElement("button");
+    restartBtn.textContent = "🔁 Neues Spiel";
+    restartBtn.addEventListener("click", () => {
+    window.location.reload();
+    });
+    results.prepend(restartBtn);
+  }
 }
 
 
