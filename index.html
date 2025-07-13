@@ -12,11 +12,13 @@
 
     <input type="text" id="search" placeholder="search character..." autocomplete="off" />
     <ul id="suggestions" class="suggestions"></ul>
-
     <div id="results">
     </div>
   </div>
-
-  <script src="script.js?v=1.0.0"></script>
+  <script>
+  const script = document.createElement('script');
+  script.src = 'main.js?v=' + Date.now();
+  document.body.appendChild(script);
+  </script>  
 </body>
 </html>
