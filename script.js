@@ -405,8 +405,7 @@ function validateCharacter(guess) {
            if (guessValue === targetValue) {
            li.classList.add("correct");
            } else if ((guessValue & targetValue) === targetValue) {
-             li.classList.add("higher");
-             li.innerHTML += " 🔽";
+             li.classList.add("semicorrect");
              } else if ((guessValue & targetValue) !== 0) {
                     li.classList.add("semicorrect");
              } else {
