@@ -294,7 +294,7 @@ fetch('characters.json')
   .then(response => response.json())
   .then(data => {
     characters = data;
-    target = characters[0]; // z.B. Ziel ist "Ruffy"
+    target = characters[Math.floor(Math.random() * characters.length)];
 }).catch(error => console.error('error on load:', error));
 
 const search = document.getElementById("search");
@@ -356,6 +356,7 @@ function resolveValue(key, value) {
 }
 
 function validateCharacter(guess) {
+  characters = characters.filter(c => c.name !== guess.name);
   const container = document.createElement("div");
   container.classList.add("result-container");
 
