@@ -104,7 +104,7 @@ const CrewName = Object.freeze({
   [Crew.FIRE_TANK_PIRATES]: "Fire Tank Pirates",
   [Crew.ON_AIR_PIRATES]: "On-Air Pirates",
   [Crew.BEAUTY_PIRATES]: "Beauty Pirates",
-  [Crew.BONNEY_PIRATES]: "Bonney Pirates"
+  [Crew.BONNEY_PIRATES]: "Bonney Pirates",
   [Crew.BLACK_CAT_PIRATES]: "Black Cat Pirates",
   [Crew.BUGGY_PIRATES]: "Buggy Pirates",
   [Crew.DON_KRIEG_PIRATES]: "Don Krieg Pirates",
