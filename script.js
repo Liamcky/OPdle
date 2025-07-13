@@ -291,9 +291,11 @@ const SagaArcs = Object.freeze({
 let characters = [];
 
 fetch('characters.json')
-  .then(data => characters = data.characters);
-
-const target = characters[0]; // z.B. Ziel ist "Ruffy"
+  .then(response => response.json())
+  .then(data => {
+    characters = data.characters;
+    const target = characters[0]; // z.B. Ziel ist "Ruffy"
+}).catch(error => console.error('error on load:', error));
 
 const search = document.getElementById("search");
 const suggestions = document.getElementById("suggestions");
