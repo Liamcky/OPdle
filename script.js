@@ -293,6 +293,80 @@ let characters = [];
 fetch('characters.json')
   .then(data => characters = data.characters);
 
+const target = characters[0]; // z.B. Ziel ist "Ruffy"
+
+const search = document.getElementById("search");
+const suggestions = document.getElementById("suggestions");
+const resultContainer = document.getElementById("result-container");
+const targetName = document.getElementById("target-name");
+const attributeList = document.getElementById("attribute-list");
+
+const attributeLabels = {
+  name: "Name",
+  bounty: "Bounty",
+  crew: "Crew",
+  devilfruit: "Devil Fruit",
+  status: "Status",
+  haki: "Haki",
+  height: "Height",
+  gender: "Gender",
+  arc: "Arc",
+  origin: "Origin"
+};
+
+search.addEventListener("input", () => {
+  const query = search.value.toLowerCase();
+  suggestions.innerHTML = "";
+
+  if (query.length === 0) return;
+
+  const matches = characters.filter(c => c.name.toLowerCase().includes(query));
+  matches.forEach(match => {
+    const li = document.createElement("li");
+    li.textContent = match.name;
+    li.addEventListener("click", () => {
+      validateCharacter(match);
+      suggestions.innerHTML = "";
+      search.value = "";
+    });
+    suggestions.appendChild(li);
+  });
+});
+
+function validateCharacter(guess) {
+  resultContainer.classList.remove("hidden");
+  targetName.textContent = target.name;
+  attributeList.innerHTML = "";
+
+  for (const key in attributeLabels) {
+    const li = document.createElement("li");
+    const label = attributeLabels[key];
+    const targetValue = target[key];
+    const guessValue = guess[key];
+
+    li.innerHTML = `<span>${label}</span><span>${guessValue}</span>`;
+
+    if (key === "bounty" || key === "height") {
+      if (guessValue === targetValue) {
+        li.classList.add("correct");
+      } else if (guessValue > targetValue) {
+        li.classList.add("higher");
+        li.innerHTML += " 🔽";
+      } else {
+        li.classList.add("lower");
+        li.innerHTML += " 🔼";
+      }
+    } else {
+      if (guessValue === targetValue) {
+        li.classList.add("correct");
+      } else {
+        li.classList.add("incorrect");
+      }
+    }
+
+    attributeList.appendChild(li);
+  }
+}
 
 
 
