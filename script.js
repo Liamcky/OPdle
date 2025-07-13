@@ -351,6 +351,8 @@ function resolveValue(key, value) {
       return Object.keys(Gender).find(k => Gender[k] === value);
     case "status":
       return Object.keys(Status).find(k => Status[k] === value);
+    case "race":
+      return Object.keys(Race).find(k => Race[k] === value);
     case "devilfruit":
       return Object.keys(Devilfruit).find(k => Devilfruit[k] === value);
     case "haki":
