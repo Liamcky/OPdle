@@ -25,11 +25,11 @@ const Devilfruit = Object.freeze({
 });
 
 const Haki = Object.freeze({
-  NONE: 0,
-  OBSERVATION: 1,
-  ARMAMENT: 2,
-  BOTH: 3,
-  CONQUEROR: 4
+  None: 0,
+  Observation: 1,
+  Armanent: 2,
+  Both: 3,
+  Conqueror: 4
 });
 
 const Crew = Object.freeze({
