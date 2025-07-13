@@ -477,5 +477,7 @@
     "bounty": 0,
     "height": 1.8,
     "origin": 0,
+    "status": 0,
+    "race": 0
   }
 ]
