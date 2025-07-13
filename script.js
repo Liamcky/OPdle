@@ -289,12 +289,12 @@ const SagaArcs = Object.freeze({
 });
 
 let characters = [];
-
+let target = null;
 fetch('characters.json')
   .then(response => response.json())
   .then(data => {
     characters = data.characters;
-    const target = characters[0]; // z.B. Ziel ist "Ruffy"
+    target = characters[0]; // z.B. Ziel ist "Ruffy"
 }).catch(error => console.error('error on load:', error));
 
 const search = document.getElementById("search");
