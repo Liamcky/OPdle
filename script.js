@@ -293,7 +293,7 @@ let target = null;
 fetch('characters.json')
   .then(response => response.json())
   .then(data => {
-    characters = data.characters;
+    characters = data;
     target = characters[0]; // z.B. Ziel ist "Ruffy"
 }).catch(error => console.error('error on load:', error));
 
