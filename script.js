@@ -310,16 +310,16 @@ const attributeList = document.getElementById("attribute-list");
 
 const attributeLabels = {
   name: "Name",
-  bounty: "Bounty",
   crew: "Crew",
+  bounty: "Bounty", 
   devilfruit: "Devil Fruit",
-  status: "Status",
   haki: "Haki",
   height: "Height",
   gender: "Gender",
-  arc: "Arc",
-  origin: "Origin",
+  status: "Status",
   race: "Race",
+  origin: "Origin",
+  arc: "Arc",
   saga: "Saga"
 };
 
