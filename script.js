@@ -318,7 +318,8 @@ const attributeLabels = {
   height: "Height",
   gender: "Gender",
   arc: "Arc",
-  origin: "Origin"
+  origin: "Origin",
+  race: "Race"
 };
 
 search.addEventListener("input", () => {
