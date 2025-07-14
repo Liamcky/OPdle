@@ -319,7 +319,8 @@ const attributeLabels = {
   gender: "Gender",
   arc: "Arc",
   origin: "Origin",
-  race: "Race"
+  race: "Race",
+  saga: "Saga"
 };
 
 search.addEventListener("input", () => {
@@ -340,7 +341,7 @@ search.addEventListener("input", () => {
     suggestions.appendChild(li);
   });
 });
-function resolveValue(key, value) {
+function resolveValue(key, value, fullObj = null) {
   switch (key) {
     case "crew":
       return CrewName[value] ?? "Unknown";
@@ -358,6 +359,8 @@ function resolveValue(key, value) {
       return Object.keys(Devilfruit).find(k => Devilfruit[k] === value);
     case "haki":
       return hakiToString(value);
+    case "saga":
+      return fullObj ? getSagaByArc(fullObj.arc) : "Unknown";
     default:
       return value;
   }
@@ -370,6 +373,15 @@ function hakiToString(value) {
   if (value & Haki.ARMAMENT) types.push("Armament");
   if (value & Haki.CONQUEROR) types.push("Conqueror");
   return types.join(", ");
+}
+
+function getSagaByArc(arcValue) {
+  for (const sagaName in SagaArcs) {
+    if (SagaArcs[sagaName].includes(arcValue)) {
+      return sagaName;
+    }
+  }
+  return "Unknown";
 }
 
 function validateCharacter(guess) {
@@ -387,10 +399,10 @@ function validateCharacter(guess) {
   for (const key in attributeLabels) {
     const li = document.createElement("li");
     const label = attributeLabels[key];
-    const targetValue = target[key];
-    const guessValue = guess[key];
-
-    let displayValue = resolveValue(key, guessValue);
+    const targetValue = key === "saga" ? getSagaByArc(target.arc) : target[key];
+    const guessValue = key === "saga" ? getSagaByArc(guess.arc) : guess[key];
+    
+    let displayValue = resolveValue(key, guessValue, guess);
 
     li.innerHTML = `<span>${label}</span><span>${displayValue}</span>`;
 
