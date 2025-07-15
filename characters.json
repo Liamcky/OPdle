@@ -479,5 +479,83 @@
     "origin": 0,
     "status": 0,
     "race": 0
-  }
+  },
+  {
+    "name": "Tashigi",
+    "gender": 1,
+    "status": 0,
+    "race": 0,
+    "devilfruit": 0,
+    "haki": 2,
+    "crew": 1,
+    "origin": 0,
+    "arc": 5,
+    "bounty": 0,
+    "height": 170
+  },
+  {
+    "name": "Smoker",
+    "gender": 0,
+    "status": 0,
+    "race": 0,
+    "devilfruit": 3,
+    "haki": 3,
+    "crew": 1,
+    "origin": 0,
+    "arc": 5,
+    "bounty": 0,
+    "height": 209
+  },
+  {
+    "name": "Gold D. Roger",
+    "gender": 0,
+    "status": 1,
+    "race": 0,
+    "devilfruit": 0,
+    "haki": 7,
+    "crew": 14,
+    "origin": 3,
+    "arc": 5,
+    "bounty": 5564800000,
+    "height": 274
+  },
+  {
+    "name": "Gaimon",
+    "gender": 0,
+    "status": 0,
+    "race": 0,
+    "devilfruit": 0,
+    "haki": 0,
+    "crew": 34,
+    "origin": 0,
+    "arc": 0,
+    "bounty": 0,
+    "height": 70
+  },
+  {
+    "name": "Monkey D. Dragon",
+    "gender": 0,
+    "status": 0,
+    "race": 0,
+    "devilfruit": 0,
+    "haki": 4,
+    "crew": 2,
+    "origin": 3,
+    "arc": 5,
+    "bounty": 0,
+    "height": 256
+  },
+  {
+    "name": "Richie",
+    "gender": 0,
+    "status": 0,
+    "race": 0,
+    "devilfruit": 0,
+    "haki": 0,
+    "crew": 31,
+    "origin": 0,
+    "arc": 1,
+    "bounty": 0,
+    "height": 220
+  }
 ]
