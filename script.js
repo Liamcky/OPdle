@@ -297,7 +297,6 @@ const SagaArcs = Object.freeze({
 
 let score = 0;
 let characters = [];
-let roundcharacters = characters;
 let target = null;
 fetch('characters.json')
   .then(response => response.json())
@@ -306,6 +305,7 @@ fetch('characters.json')
     target = characters[Math.floor(Math.random() * characters.length)];
 }).catch(error => console.error('error on load:', error));
 
+let roundcharacters = characters;
 const search = document.getElementById("search");
 const suggestions = document.getElementById("suggestions");
 const results = document.getElementById("results");
