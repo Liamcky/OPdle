@@ -11,11 +11,13 @@
   <div class="container">
     <div>Score:<span id="score"></span></div>
     <h1>One Piece Charakter Quiz</h1>
-
-    <input type="text" id="search" placeholder="Charakter Auswahl..." autocomplete="off" />
-    <ul id="suggestions" class="suggestions"></ul>
-    <div id="results">
+    
+    <div class="dropdown">
+      <input type="text" id="search" placeholder="Charakter Auswahl..." autocomplete="off" />
+      <ul id="suggestions" class="suggestions"></ul>
     </div>
+    
+    <div id="results"></div>
   </div>
   <script>
   const script = document.createElement('script');
