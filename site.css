@@ -47,6 +47,7 @@ input:focus {
   background: #21262d;
   cursor: pointer;
   border-bottom: 1px solid #30363d;
+  z-index: 1;
 }
 
 .suggestions li:hover {
