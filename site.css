@@ -40,22 +40,23 @@ input:focus {
 .suggestions {
   list-style: none;
   position: absolute;
+  top: 100%;
+  left: 0;
   width: 100%;
-  background-color: #21262d;
+  background: #21262d;
+  border: 1px solid #30363d;
+  border-top: none;
   max-height: 300px;
+  overflow-y: auto;
+  z-index: 10;
 }
 
 .suggestions li {
   padding: 8px;
-  background: #21262d;
-  cursor: pointer;
-  border-bottom: 1px solid #30363d;
-  z-index: 1;
-  overflow: auto;
-  max-height: 300px;
-  position: absolute;
-  width: 100%;
-  position: relative;
+  background: #21262d;
+  cursor: pointer;
+  border-bottom: 1px solid #30363d;
+  width: 100%;
 }
 
 .suggestions li:hover {
