@@ -295,6 +295,7 @@ const SagaArcs = Object.freeze({
   ]
 });
 
+let score = 0;
 let characters = [];
 let target = null;
 fetch('characters.json')
@@ -309,6 +310,7 @@ const suggestions = document.getElementById("suggestions");
 const results = document.getElementById("results");
 const targetName = document.getElementById("target-name");
 const attributeList = document.getElementById("attribute-list");
+const scoreEl = document.getElementById("score");
 
 const attributeLabels = {
   name: "Name",
@@ -447,6 +449,8 @@ function validateCharacter(guess) {
   );
 
   if (allCorrect) {
+    score += 1;
+    scoreEl.textContent = score;
     search.disabled = true;
     search.placeholder = "🎉 Vollständig gelöst!";
     const restartBtn = document.createElement("button");
