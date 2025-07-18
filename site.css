@@ -52,9 +52,7 @@ input:focus {
 
 .suggestions li {
   padding: 8px;
-  background: #21262d;
   cursor: pointer;
-  border-bottom: 1px solid #30363d;
   width: 100%;
 }
 
