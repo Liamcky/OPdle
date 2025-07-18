@@ -31,6 +31,10 @@ input[type="text"] {
   font-size: 16px;
 }
 
+input:focus {
+  outline: none;
+}
+
 .suggestions {
   list-style: none;
   padding: 0;
@@ -90,7 +94,7 @@ input[type="text"] {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
