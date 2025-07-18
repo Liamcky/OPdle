@@ -297,6 +297,7 @@ const SagaArcs = Object.freeze({
 
 let score = 0;
 let characters = [];
+let roundcharacters = characters;
 let target = null;
 fetch('characters.json')
   .then(response => response.json())
@@ -333,7 +334,7 @@ search.addEventListener("input", () => {
 
   if (query.length === 0) return;
 
-  const matches = characters.filter(c => c.name.toLowerCase().includes(query));
+  const matches = roundcharacters.filter(c => c.name.toLowerCase().includes(query));
   matches.forEach(match => {
     const li = document.createElement("li");
     li.textContent = match.name;
@@ -389,7 +390,7 @@ function getSagaByArc(arcValue) {
 }
 
 function validateCharacter(guess) {
-  characters = characters.filter(c => c.name !== guess.name);
+  roundcharacters = roundcharacters.filter(c => c.name !== guess.name);
   const container = document.createElement("div");
   container.classList.add("result-container");
 
@@ -461,6 +462,7 @@ function validateCharacter(guess) {
       search.value = "";
       results.innerHTML = "";
       target = characters[Math.floor(Math.random() * characters.length)];
+      roundcharacters = characters;
     });
     results.prepend(restartBtn);
   }
