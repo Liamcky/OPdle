@@ -11,5 +11,3 @@ const imageNumber = (today % imageCount);
 const imagePath = `assets/backgrounds/bg${imageNumber}.jpg`;
 
 backgroundElement.style.backgroundImage = `url(${imagePath})`;
-backgroundElement.style.backgroundSize = "cover";
-backgroundElement.style.backgroundPosition = "center";
