@@ -8,7 +8,7 @@ const today = new Date().getDay();
 
 //get filename per image count > 1
 const imageNumber = (today % imageCount);
-const imagePath = `/assets/backgrounds/bg${imageNumber}.jpg`;
+const imagePath = `assets/backgrounds/bg${imageNumber}.jpg`;
 
 backgroundElement.style.backgroundImage = `url(${imagePath})`;
 backgroundElement.style.backgroundSize = "cover";
