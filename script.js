@@ -412,10 +412,10 @@ function validateCharacter(guess) {
       if (guessValue === targetValue) {
         li.classList.add("correct");
       } else if (guessValue > targetValue) {
-        li.classList.add("higher");
+        li.classList.add("incorrect");
         li.innerHTML += " 🔻";
       } else {
-        li.classList.add("lower");
+        li.classList.add("incorrect");
         li.innerHTML += " 🔺";
       }
     } else if (key === "haki") {
