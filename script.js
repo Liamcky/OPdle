@@ -14,7 +14,9 @@ const Race = Object.freeze({
   Human: 0,
   Fishman: 1,
   Giant: 2,
-  SeaKing: 3
+  SeaKing: 3,
+  Mink: 4,
+  Animal: 5
 });
 
 const Devilfruit = Object.freeze({
