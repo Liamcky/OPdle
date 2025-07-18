@@ -51,6 +51,7 @@ input:focus {
   overflow-y: auto;
   overflow-x: hidden;
   max-height: 300px;
+  position: absolute;
 }
 
 .suggestions li:hover {
