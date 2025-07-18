@@ -50,7 +50,7 @@ input:focus {
   z-index: 1;
   overflow: auto;
   width: 100%;
-  padding: 10px;
+  height: 300px;
 }
 
 .suggestions div{
@@ -58,6 +58,7 @@ input:focus {
   text-decoration: none;
   display: block;
   background-color: #30363d;
+  padding: 10px;
 }
 
 .suggestions div:hover {
