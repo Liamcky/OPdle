@@ -336,14 +336,14 @@ search.addEventListener("input", () => {
 
   const matches = roundcharacters.filter(c => c.name.toLowerCase().includes(query));
   matches.forEach(match => {
-    const li = document.createElement("li");
-    li.textContent = match.name;
-    li.addEventListener("click", () => {
+    const div = document.createElement("div");
+    div.textContent = match.name;
+    div.addEventListener("click", () => {
       validateCharacter(match);
       suggestions.innerHTML = "";
       search.value = "";
     });
-    suggestions.appendChild(li);
+    suggestions.appendChild(div);
   });
 });
 function resolveValue(key, value, fullObj = null) {
