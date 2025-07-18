@@ -107,7 +107,6 @@ const CrewName = Object.freeze({
   [Crew.BEAUTY_PIRATES]: "Beauty Pirates",
   [Crew.BONNEY_PIRATES]: "Bonney Pirates",
   [Crew.BLACK_CAT_PIRATES]: "Black Cat Pirates",
-  [Crew.BUGGY_PIRATES]: "Buggy Pirates",
   [Crew.DON_KRIEG_PIRATES]: "Don Krieg Pirates",
   [Crew.NONE]: "no crew",
   [Crew.ALVIDA_PIRATES]: "Alvida Pirates"
@@ -297,15 +296,16 @@ const SagaArcs = Object.freeze({
 
 let score = 0;
 let characters = [];
+let roundcharacters = [];
 let target = null;
 fetch('characters.json')
   .then(response => response.json())
   .then(data => {
     characters = data;
+    roundcharacters = [...characters];
     target = characters[Math.floor(Math.random() * characters.length)];
 }).catch(error => console.error('error on load:', error));
 
-let roundcharacters = characters;
 const search = document.getElementById("search");
 const suggestions = document.getElementById("suggestions");
 const results = document.getElementById("results");
