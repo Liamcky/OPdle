@@ -38,6 +38,7 @@ input:focus {
 }
 
 .suggestions {
+  list-style: none;
   position: absolute;
   width: 100%;
   background-color: #21262d;
