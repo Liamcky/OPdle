@@ -451,7 +451,7 @@ function validateCharacter(guess) {
 
   if (allCorrect) {
     score += 1;
-    scoreEl.innerHTML = `<span>${score}</span>`;
+    scoreEl.textContent = score;
     search.disabled = true;
     search.placeholder = "🎉 Vollständig gelöst!";
     const restartBtn = document.createElement("button");
