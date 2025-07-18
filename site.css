@@ -79,14 +79,6 @@ input:focus {
   background-color: #da3633;
 }
 
-.higher {
-  background-color: #da3633;
-}
-
-.lower {
-  background-color: #da3633;
-}
-
 .hidden {
   display: none;
 }
@@ -95,7 +87,7 @@ input:focus {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100vh;
+    height: 90%;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
