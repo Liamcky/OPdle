@@ -33,6 +33,7 @@ input[type="text"] {
 
 input:focus {
   outline: none;
+  background: lightblue;
 }
 
 .suggestions {
