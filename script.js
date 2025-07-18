@@ -452,7 +452,11 @@ function validateCharacter(guess) {
     const restartBtn = document.createElement("button");
     restartBtn.textContent = "🔁 Neues Spiel";
     restartBtn.addEventListener("click", () => {
-    window.location.reload();
+      search.disabled = false;
+      search.placeholder = "Charakter suchen...";
+      search.value = "";
+      results.innerHTML = "";
+      target = characters[Math.floor(Math.random() * characters.length)];
     });
     results.prepend(restartBtn);
   }
