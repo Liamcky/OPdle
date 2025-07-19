@@ -450,11 +450,6 @@ function validateCharacter(guess) {
   search.value = "";
   countGuesses += 1;
 
-  if (countGuesses === maxGuesses){
-    showtarget.textContent = target.name;
-    showtarget.showModal();
-  }
-
   const allCorrect = Object.keys(attributeLabels).every(
   key => guess[key] === target[key]
   );
@@ -475,6 +470,10 @@ function validateCharacter(guess) {
       roundcharacters = characters;
     });
     results.prepend(restartBtn);
+  } 
+  else if (countGuesses === maxGuesses){
+    showtarget.innerHTML = `<span>${target.name}</span>`;
+    showtarget.showModal();
   }
 }
 
