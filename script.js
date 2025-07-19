@@ -314,6 +314,8 @@ const results = document.getElementById("results");
 const targetName = document.getElementById("target-name");
 const attributeList = document.getElementById("attribute-list");
 const scoreEl = document.getElementById("score");
+const showtarget = document.getElementById("showtarget");
+const closeBtn = document.querySelector(".close");
 
 const attributeLabels = {
   name: "Name",
@@ -449,7 +451,8 @@ function validateCharacter(guess) {
   countGuesses += 1;
 
   if (countGuesses === maxGuesses){
-    scoreEl.textContent = target.name;
+    showtarget.textContent = target.name;
+    showtarget.showModal();
   }
 
   const allCorrect = Object.keys(attributeLabels).every(
@@ -474,6 +477,10 @@ function validateCharacter(guess) {
     results.prepend(restartBtn);
   }
 }
+
+closeBtn.addEventListener("click", () => {
+  showtarget.close();
+});
 
 
 
