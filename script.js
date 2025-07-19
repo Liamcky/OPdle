@@ -295,6 +295,8 @@ const SagaArcs = Object.freeze({
 });
 
 let score = 0;
+let maxGuesses = 5;
+let countGuesses = 0;
 let characters = [];
 let roundcharacters = [];
 let target = null;
@@ -444,6 +446,11 @@ function validateCharacter(guess) {
 
   // Suchfeld zurücksetzen
   search.value = "";
+  countGuesses += 1;
+
+  if (countGuesses === maxGuesses){
+    scoreEl.textContent = target.name;
+  }
 
   const allCorrect = Object.keys(attributeLabels).every(
   key => guess[key] === target[key]
