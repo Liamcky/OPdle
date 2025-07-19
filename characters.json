@@ -481,6 +481,32 @@
     "race": 0
   },
   {
+    "name": "Monkey D. Garp",
+    "gender": 0,
+    "arc": 4,
+    "devilfruit": 0,
+    "crew": 1,
+    "haki": 7,
+    "bounty": 3000000000,
+    "height": 2.87,
+    "origin": 0,
+    "status": 0,
+    "race": 0
+  },
+  {
+    "name": "Bogart",
+    "gender": 0,
+    "arc": 4,
+    "devilfruit": 0,
+    "crew": 1,
+    "haki": 0,
+    "bounty": 0,
+    "height": 2.90,
+    "origin": 0,
+    "status": 0,
+    "race": 0
+  },
+  {
     "name": "Tashigi",
     "gender": 1,
     "arc": 5,
