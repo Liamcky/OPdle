@@ -709,7 +709,7 @@
     "crew": 10,
     "haki": 0,
     "bounty": 0,
-    "height": 0.6,
+    "height": 0.60,
     "origin": 0,
     "status": 0,
     "race": 5
@@ -722,7 +722,7 @@
     "crew": 10,
     "haki": 0,
     "bounty": 0,
-    "height": 0.7,
+    "height": 0.70,
     "origin": 0,
     "status": 0,
     "race": 5
@@ -761,8 +761,8 @@
     "crew": 21,
     "haki": 0,
     "bounty": 1800000000,
-    "height": 21.3,
-    "origin": 5,
+    "height": 21.30,
+    "origin": 4,
     "status": 0,
     "race": 2
   },
@@ -774,8 +774,8 @@
     "crew": 21,
     "haki": 0,
     "bounty": 1800000000,
-    "height": 22.6,
-    "origin": 5,
+    "height": 22.60,
+    "origin": 4,
     "status": 0,
     "race": 2
   },
@@ -788,7 +788,7 @@
     "haki": 0,
     "bounty": 0,
     "height": 2.13,
-    "origin": 5,
+    "origin": 4,
     "status": 1,
     "race": 0
   },
@@ -801,7 +801,7 @@
     "haki": 0,
     "bounty": 0,
     "height": 1.88,
-    "origin": 5,
+    "origin": 4,
     "status": 0,
     "race": 0
   },
@@ -814,7 +814,7 @@
     "haki": 0,
     "bounty": 0,
     "height": 2.07,
-    "origin": 5,
+    "origin": 4,
     "status": 0,
     "race": 0
   },
@@ -827,7 +827,7 @@
     "haki": 0,
     "bounty": 0,
     "height": 2.18,
-    "origin": 5,
+    "origin": 4,
     "status": 0,
     "race": 0
   },
@@ -840,7 +840,7 @@
     "haki": 0,
     "bounty": 0,
     "height": 1.94,
-    "origin": 5,
+    "origin": 4,
     "status": 0,
     "race": 0
   },
@@ -852,8 +852,8 @@
     "crew": 0,
     "haki": 1,
     "bounty": 1000,
-    "height": 0.9,
-    "origin": 5,
+    "height": 0.90,
+    "origin": 4,
     "status": 0,
     "race": 5
   },
@@ -866,7 +866,7 @@
     "haki": 0,
     "bounty": 0,
     "height": 1.86,
-    "origin": 5,
+    "origin": 4,
     "status": 0,
     "race": 0
   }
