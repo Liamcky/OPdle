@@ -472,7 +472,9 @@ function validateCharacter(guess) {
     results.prepend(restartBtn);
   } 
   else if (countGuesses === maxGuesses){
-    showtarget.innerHTML = `<span>${target.name}</span>`;
+    const span = document.createElement("span");
+    span.textContent = target.name;
+    showtarget.appendChild(span);
     showtarget.showModal();
   }
 }
