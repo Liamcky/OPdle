@@ -78,11 +78,9 @@ input:focus {
 }
 
 .attribute-list li {
-  background: #21262d;
   border: 1px solid #30363d;
   color: #f0f6fc;
   border-radius: 6px;
-  padding: 10px;
   text-align: center;
   aspect-ratio: 1 / 1; /* macht das Quadrat */
   display: flex;
