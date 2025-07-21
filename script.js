@@ -388,11 +388,11 @@ function hakiToString(haki) {
 
 function formatBounty(bounty) {
   if (bounty >= 1_000_000_000) {
-    return (bounty / 1_000_000_000).toFixed(2).replace('.', ',') + ' Mrd.';
+    return (bounty / 1_000_000_000).toFixed() + ' Mrd.';
   } else if (bounty >= 1_000_000) {
-    return (bounty / 1_000_000).toFixed(1).replace('.', ',') + ' Mio.';
+    return (bounty / 1_000_000).toFixed() + ' Mio.';
   } else if (bounty >= 1_000) {
-    return (bounty / 1_000).toFixed(0) + ' Tsd.';
+    return (bounty / 1_000).toFixed() + ' Tsd.';
   } else {
     return bounty.toString();
   }
