@@ -372,6 +372,8 @@ function resolveValue(key, value, fullObj = null) {
       return fullObj ? getSagaByArc(fullObj.arc) : "Unknown";
     case "bounty":
       return formatBounty(value);
+    case "height":
+      return height.toFixed(2);
     default:
       return value;
   }
