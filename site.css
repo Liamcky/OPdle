@@ -74,7 +74,7 @@ table {
   background-color: #161b22;
   color: #f0f6fc;
   border-radius: 10px;
-  overflow: hidden;
+  overflow: auto;
 }
 
 th, td {
@@ -86,18 +86,6 @@ th, td {
 th {
   background-color: #21262d;
   color: #8b949e;
-}
-
-tr.correct td {
-  background-color: #1f883d;
-}
-
-tr.semicorrect td {
-  background-color: #ffbf00;
-}
-
-tr.incorrect td {
-  background-color: #da3633;
 }
 
 .correct {
@@ -115,6 +103,7 @@ tr.incorrect td {
 .hidden {
   display: none;
 }
+
 #background {
     position: fixed;
     top: 0;
