@@ -480,6 +480,7 @@ const row = document.createElement("tr");
       search.value = "";
       tbody.innerHTML = "";
       reset.innerHTML = "";
+      table.classList.add("hidden");
       target = characters[Math.floor(Math.random() * characters.length)];
       roundcharacters = characters;
       countGuesses = 0;
