@@ -478,6 +478,7 @@ const row = document.createElement("tr");
       search.disabled = false;
       search.placeholder = "Charakter suchen...";
       search.value = "";
+      table.innerHTML = "";
       target = characters[Math.floor(Math.random() * characters.length)];
       roundcharacters = characters;
     });
