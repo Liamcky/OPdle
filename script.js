@@ -398,10 +398,6 @@ function validateCharacter(guess) {
   const container = document.createElement("div");
   container.classList.add("result-container");
 
-  const nameHeader = document.createElement("h3");
-  nameHeader.textContent = guess.name;
-  container.appendChild(nameHeader);
-
   const table = document.getElementById("guessTable");
   const tbody = document.getElementById("guessBody");
 
