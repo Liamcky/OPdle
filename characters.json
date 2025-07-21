@@ -1016,7 +1016,7 @@
   {
     "name": "Karoo",
     "gender": 2,
-    "arc": 13,
+    "arc": 10,
     "devilfruit": 0,
     "crew": 10,
     "haki": 0,
@@ -1024,7 +1024,7 @@
     "height": 1.50,
     "origin": 1,
     "status": 0,
-    "race": 4
+    "race": 5
   },
   {
     "name": "König Kobra",
