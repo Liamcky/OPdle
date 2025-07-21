@@ -395,8 +395,6 @@ function getSagaByArc(arcValue) {
 
 function validateCharacter(guess) {
   roundcharacters = roundcharacters.filter(c => c.name !== guess.name);
-  const container = document.createElement("div");
-  container.classList.add("result-container");
 
   const table = document.getElementById("guessTable");
   const tbody = document.getElementById("guessBody");
@@ -443,8 +441,8 @@ const row = document.createElement("tr");
     row.appendChild(td);
   }
 
-  container.appendChild(row);
-  results.prepend(container); // ⬅ neueste oben
+  table.appendChild(row);
+  results.prepend(table); // ⬅ neueste oben
 
   // Suchfeld zurücksetzen
   search.value = "";
