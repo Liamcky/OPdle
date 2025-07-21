@@ -402,48 +402,52 @@ function validateCharacter(guess) {
   nameHeader.textContent = guess.name;
   container.appendChild(nameHeader);
 
-  const ul = document.createElement("ul");
-  ul.classList.add("attribute-list");
+  const table = document.getElementById("guessTable");
+  const tbody = document.getElementById("guessBody");
+
+if (table.classList.contains("hidden")) {
+  table.classList.remove("hidden"); // Nur beim ersten Treffer anzeigen
+}
+
+const row = document.createElement("tr");
 
   for (const key in attributeLabels) {
-    const li = document.createElement("li");
-    const label = attributeLabels[key];
     const targetValue = key === "saga" ? getSagaByArc(target.arc) : target[key];
     const guessValue = key === "saga" ? getSagaByArc(guess.arc) : guess[key];
     
     let displayValue = resolveValue(key, guessValue, guess);
-
-    li.innerHTML = `<span>${label}</span><span>${displayValue}</span>`;
+    const td = document.createElement("td");
+    td.textContent = displayValue};
 
     if (key === "bounty" || key === "height" || key === "arc") {
       if (guessValue === targetValue) {
-        li.classList.add("correct");
+        td.classList.add("correct");
       } else if (guessValue > targetValue) {
-        li.classList.add("incorrect");
-        li.innerHTML += " 🔻";
+        td.classList.add("incorrect");
+        td.innerHTML += " 🔻";
       } else {
-        li.classList.add("incorrect");
-        li.innerHTML += " 🔺";
+        td.classList.add("incorrect");
+        td.innerHTML += " 🔺";
       }
     } else if (key === "haki") {
            if (guessValue === targetValue) {
-           li.classList.add("correct");
+           td.classList.add("correct");
            } else if (guessValue !== 0 && (guessValue & targetValue) !== 0) {
-             li.classList.add("semicorrect");
+             td.classList.add("semicorrect");
              } else {
-               li.classList.add("incorrect");
+               td.classList.add("incorrect");
                }
     } else {
       if (guessValue === targetValue) {
-        li.classList.add("correct");
+        td.classList.add("correct");
       } else {
-        li.classList.add("incorrect");
+        td.classList.add("incorrect");
       }
     }
-    ul.appendChild(li);
+    row.appendChild(td);
   }
 
-  container.appendChild(ul);
+  container.appendChild(row);
   results.prepend(container); // ⬅ neueste oben
 
   // Suchfeld zurücksetzen
@@ -453,7 +457,7 @@ function validateCharacter(guess) {
   const allCorrect = Object.keys(attributeLabels).every(
   key => guess[key] === target[key]
   );
-
+// Überprüfen ob alle Felder Korrekt sind und zurücksetzen 
   if (allCorrect) {
     score += 1;
     scoreEl.textContent = score;
