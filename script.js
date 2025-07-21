@@ -310,7 +310,7 @@ fetch('characters.json')
 
 const search = document.getElementById("search");
 const suggestions = document.getElementById("suggestions");
-const results = document.getElementById("results");
+const reset = document.getElementById("reset");
 const targetName = document.getElementById("target-name");
 const attributeList = document.getElementById("attribute-list");
 const scoreEl = document.getElementById("score");
@@ -441,8 +441,7 @@ const row = document.createElement("tr");
     row.appendChild(td);
   }
 
-  table.appendChild(row);
-  results.prepend(table); // ⬅ neueste oben
+  table.prepend(row); // ⬅ neueste oben
 
   // Suchfeld zurücksetzen
   search.value = "";
@@ -463,11 +462,10 @@ const row = document.createElement("tr");
       search.disabled = false;
       search.placeholder = "Charakter suchen...";
       search.value = "";
-      results.innerHTML = "";
       target = characters[Math.floor(Math.random() * characters.length)];
       roundcharacters = characters;
     });
-    results.prepend(restartBtn);
+    reset.prepend(restartBtn);
   } 
   else if (countGuesses === maxGuesses){
     const span = document.createElement("span");
