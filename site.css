@@ -75,6 +75,7 @@ table {
   color: #f0f6fc;
   border-radius: 10px;
   overflow: auto;
+  max-width: 600px;
 }
 
 th, td {
