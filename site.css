@@ -67,30 +67,6 @@ input:focus {
   background: #30363d;
 }
 
-.attribute-list {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  gap: 10px;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.attribute-list li {
-  border: 1px solid #30363d;
-  color: #f0f6fc;
-  border-radius: 6px;
-  text-align: center;
-  aspect-ratio: 1 / 1; /* macht das Quadrat */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  font-size: 14px;
-  transition: background 0.2s;
-}
-
 table {
   width: 100%;
   border-collapse: collapse;
