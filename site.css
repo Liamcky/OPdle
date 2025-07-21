@@ -91,6 +91,39 @@ input:focus {
   transition: background 0.2s;
 }
 
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: #161b22;
+  color: #f0f6fc;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+th, td {
+  padding: 10px;
+  text-align: center;
+  border-bottom: 1px solid #30363d;
+}
+
+th {
+  background-color: #21262d;
+  color: #8b949e;
+}
+
+tr.correct td {
+  background-color: #1f883d;
+}
+
+tr.semicorrect td {
+  background-color: #ffbf00;
+}
+
+tr.incorrect td {
+  background-color: #da3633;
+}
+
 .correct {
   background-color: #1f883d;
 }
