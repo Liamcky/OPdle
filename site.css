@@ -90,14 +90,14 @@ th, td {
 }
 
 th {
-  width: 30px;
+  width: 50px;
   background-color: #21262d;
   color: #8b949e;
 }
 
 td {
-  width: 30px;
-  height: 30px;
+  width: 50px;
+  height: 50px;
 }
 
 .correct {
