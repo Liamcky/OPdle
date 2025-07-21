@@ -3,6 +3,7 @@ html, body {
   padding: 0;
   height: 100%;
 }
+
 body {
   font-family: Arial, sans-serif;
   color: #f0f6fc;
@@ -66,6 +67,7 @@ input:focus {
 .suggestions div:hover {
   background: #30363d;
 }
+
 .table-container{
   overflow: auto;
   max-width: 600px;
