@@ -478,9 +478,10 @@ const row = document.createElement("tr");
       search.disabled = false;
       search.placeholder = "Charakter suchen...";
       search.value = "";
-      table.innerHTML = "";
+      tbody.innerHTML = "";
       target = characters[Math.floor(Math.random() * characters.length)];
       roundcharacters = characters;
+      countGuesses = 0;
     });
     reset.prepend(restartBtn);
   } 
