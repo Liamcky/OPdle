@@ -373,7 +373,7 @@ function resolveValue(key, value, fullObj = null) {
     case "bounty":
       return formatBounty(value);
     case "height":
-      return height.toFixed(2);
+      return value.toFixed(2);
     default:
       return value;
   }
