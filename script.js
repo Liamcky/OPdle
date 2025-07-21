@@ -484,7 +484,7 @@ const row = document.createElement("tr");
       roundcharacters = characters;
       countGuesses = 0;
     });
-    reset.prepend(restartBtn);
+    reset.appendChild(restartBtn);
   } 
   else if (countGuesses === maxGuesses){
     const span = document.createElement("span");
