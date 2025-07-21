@@ -457,7 +457,7 @@ const row = document.createElement("tr");
     row.appendChild(td);
   }
 
-  table.prepend(row); // ⬅ neueste oben
+  tbody.prepend(row); // ⬅ neueste oben
 
   // Suchfeld zurücksetzen
   search.value = "";
@@ -479,6 +479,7 @@ const row = document.createElement("tr");
       search.placeholder = "Charakter suchen...";
       search.value = "";
       tbody.innerHTML = "";
+      reset.innerHTML = "";
       target = characters[Math.floor(Math.random() * characters.length)];
       roundcharacters = characters;
       countGuesses = 0;
