@@ -417,7 +417,7 @@ const row = document.createElement("tr");
     
     let displayValue = resolveValue(key, guessValue, guess);
     const td = document.createElement("td");
-    td.textContent = displayValue};
+    td.textContent = displayValue;
 
     if (key === "bounty" || key === "height" || key === "arc") {
       if (guessValue === targetValue) {
