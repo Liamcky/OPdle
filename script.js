@@ -370,6 +370,8 @@ function resolveValue(key, value, fullObj = null) {
       return hakiToString(value);
     case "saga":
       return fullObj ? getSagaByArc(fullObj.arc) : "Unknown";
+    case "bounty":
+      return formatBounty(value);
     default:
       return value;
   }
@@ -382,6 +384,18 @@ function hakiToString(value) {
   if (value & Haki.ARMAMENT) types.push("Armament");
   if (value & Haki.CONQUEROR) types.push("Conqueror");
   return types.join(", ");
+}
+
+function formatBounty(bounty) {
+  if (bounty >= 1_000_000_000) {
+    return (bounty / 1_000_000_000).toFixed(1).replace('.', ',') + ' Mrd.';
+  } else if (bounty >= 1_000_000) {
+    return (bounty / 1_000_000).toFixed(1).replace('.', ',') + ' Mio.';
+  } else if (bounty >= 1_000) {
+    return (bounty / 1_000).toFixed(0) + ' Tsd.';
+  } else {
+    return bounty.toString();
+  }
 }
 
 function getSagaByArc(arcValue) {
