@@ -373,7 +373,7 @@ function resolveValue(key, value, fullObj = null) {
     case "bounty":
       return formatBounty(value);
     case "height":
-      return value.toFixed(2);
+      return value.toFixed(2).replace('.', ',');
     default:
       return value;
   }
@@ -390,11 +390,11 @@ function hakiToString(haki) {
 
 function formatBounty(bounty) {
   if (bounty >= 1_000_000_000) {
-    return parseFloat((bounty / 1_000_000_000).toFixed(3)) + ' Mrd.';
+    return parseFloat((bounty / 1_000_000_000).toFixed(3)).replace('.', ',') + ' Mrd.';
   } else if (bounty >= 1_000_000) {
-    return parseFloat((bounty / 1_000_000).toFixed(3)) + ' Mio.';
+    return parseFloat((bounty / 1_000_000).toFixed(3)).replace('.', ',') + ' Mio.';
   } else if (bounty >= 1_000) {
-    return (bounty / 1_000).toFixed() + ' Tsd.';
+    return (bounty / 1_000).toFixed().replace('.', ',') + ' Tsd.';
   } else {
     return bounty.toString();
   }
