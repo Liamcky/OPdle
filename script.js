@@ -377,20 +377,20 @@ function resolveValue(key, value, fullObj = null) {
   }
 }
 
-function hakiToString(value) {
-  if (value === 0) return "None";
+function hakiToString(haki) {
+  if (haki === 0) return "None";
   const types = [];
-  if (value & Haki.OBSERVATION) types.push("Observation");
-  if (value & Haki.ARMAMENT) types.push("Armament");
-  if (value & Haki.CONQUEROR) types.push("Conqueror");
+  if (haki & Haki.OBSERVATION) types.push("Observation");
+  if (haki & Haki.ARMAMENT) types.push("Armament");
+  if (haki & Haki.CONQUEROR) types.push("Conqueror");
   return types.join(", ");
 }
 
 function formatBounty(bounty) {
   if (bounty >= 1_000_000_000) {
-    return (bounty / 1_000_000_000).toFixed(3).replace('.', ',') + ' Mrd.';
+    return (bounty / 1_000_000_000).toFixed(2).replace('.', ',') + ' Mrd.';
   } else if (bounty >= 1_000_000) {
-    return (bounty / 1_000_000).toFixed(3).replace('.', ',') + ' Mio.';
+    return (bounty / 1_000_000).toFixed(1).replace('.', ',') + ' Mio.';
   } else if (bounty >= 1_000) {
     return (bounty / 1_000).toFixed(0) + ' Tsd.';
   } else {
