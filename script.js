@@ -390,9 +390,9 @@ function hakiToString(haki) {
 
 function formatBounty(bounty) {
   if (bounty >= 1_000_000_000) {
-    return (bounty / 1_000_000_000).toFixed() + ' Mrd.';
+    return parseFloat((bounty / 1_000_000_000).toFixed(3)) + ' Mrd.';
   } else if (bounty >= 1_000_000) {
-    return (bounty / 1_000_000).toFixed() + ' Mio.';
+    return parseFloat((bounty / 1_000_000).toFixed(3)) + ' Mio.';
   } else if (bounty >= 1_000) {
     return (bounty / 1_000).toFixed() + ' Tsd.';
   } else {
