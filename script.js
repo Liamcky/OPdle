@@ -431,10 +431,10 @@ const row = document.createElement("tr");
     if(key === "bounty"){
       const SVG_NS = "http://www.w3.org/2000/svg";
       const svg = document.createElementNS(SVG_NS, "svg");
-      svg.setAttribute("viewBox", "0 0 400 632");
+      svg.setAttribute("viewBox", "0 0 400 640");
       svg.setAttribute("width", "1em");
       svg.setAttribute("height", "1em");
-      svg.setAttribute("fill", "white");
+      svg.setAttribute("fill", "#f0f6fc");
 
       const path = document.createElementNS(SVG_NS, "path");
       path.setAttribute("d", berrysvg);
