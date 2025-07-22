@@ -430,7 +430,7 @@ const row = document.createElement("tr");
     
     if(key === "bounty"){
       const SVG_NS = "http://www.w3.org/2000/svg";
-      const svg = document.createElementNS(SVG_ND, "svg");
+      const svg = document.createElementNS(SVG_NS, "svg");
       svg.setAttribute("viewBox", "0 0 296 296");
       svg.setAttribute("width", "24");
       svg.setAttribute("height", "24");
