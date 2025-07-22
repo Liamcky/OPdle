@@ -10,7 +10,7 @@ body {
 }
 
 .container {
-  max-width: 600px;
+  max-width: 900px;
   margin: auto;
   background-color: #161b22;
   padding: 20px;
@@ -42,7 +42,7 @@ input:focus {
 .dropdown {
   position: relative;
   display: inline-block;
-  max-width: 600px;
+  max-width: 900px;
   width: 100%;
 }
 
@@ -70,7 +70,7 @@ input:focus {
 
 .table-container{
   overflow: auto;
-  max-width: 600px;
+  max-width: 900px;
 }
 
 table {
