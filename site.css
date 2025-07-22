@@ -80,7 +80,7 @@ table {
   margin-top: 20px;
   background-color: #161b22;
   color: #f0f6fc;
-  border-spacing: 8px;
+  border-spacing: 6px;
 }
 
 th, td {
@@ -101,6 +101,7 @@ td {
   width: 60px;
   height: 60px;
   border-radius: 10px;
+  font-size: 14px;
 }
 
 .correct {
