@@ -435,7 +435,7 @@ const row = document.createElement("tr");
       svg.setAttribute("width", "1em");
       svg.setAttribute("height", "1em");
       svg.setAttribute("fill", "#f0f6fc");
-      svg.style.verticalAlign = "sub";
+      svg.style.verticalAlign = "-2px";
 
       const path = document.createElementNS(SVG_NS, "path");
       path.setAttribute("d", berrysvg);
