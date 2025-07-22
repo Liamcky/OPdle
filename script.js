@@ -431,9 +431,9 @@ const row = document.createElement("tr");
     if(key === "bounty"){
       const SVG_NS = "http://www.w3.org/2000/svg";
       const svg = document.createElementNS(SVG_NS, "svg");
-      svg.setAttribute("viewBox", "0 0 296 296");
-      svg.setAttribute("width", "0.5em");
-      svg.setAttribute("height", "0.5em");
+      svg.setAttribute("viewBox", "0 0 400 632");
+      svg.setAttribute("width", "1em");
+      svg.setAttribute("height", "1em");
       svg.setAttribute("fill", "white");
 
       const path = document.createElementNS(SVG_NS, "path");
