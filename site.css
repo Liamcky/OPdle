@@ -105,16 +105,16 @@ td {
 
 .correct {
   background-color: #1f883d;
-  border: 2px solid  #1d883d;
+  border: 2px solid  #28b250;
 }
 
 .semicorrect{
   background-color: #ffbf00;
-  border: 2px solid  #fdbf00;
+  border: 2px solid  #ffcc33;
 }
 
 .incorrect {
-  background-color: #da3633;
+  background-color: #b22624;
   border: 2px solid  #d63633;
 }
 
