@@ -427,8 +427,19 @@ const row = document.createElement("tr");
     
     let displayValue = resolveValue(key, guessValue, guess);
     const td = document.createElement("td");
-    td.textContent = displayValue;
-
+    
+    if(key === "bounty"){
+      const img = document.createElement('img');
+      img.src = 'assets/berry.png';
+      img.alt = 'Berry';
+      img.style.width = '1em';
+      img.style.height = '1em';
+      td.appendChild(img);
+      td.append(' ', displayValue);
+        }
+    else{
+      td.textContent = displayValue;
+    }
     if (key === "bounty" || key === "height" || key === "arc") {
       if (guessValue === targetValue) {
         td.classList.add("correct");
