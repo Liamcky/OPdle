@@ -442,7 +442,7 @@ const row = document.createElement("tr");
 
       svg.appendChild(path);
       td.appendChild(svg);
-      td.append(' ', displayValue);
+      td.append('', displayValue);
         }
     else{
       td.textContent = displayValue;
