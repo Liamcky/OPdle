@@ -101,20 +101,21 @@ td {
   width: 60px;
   height: 60px;
   border-radius: 10px;
-  border-bottom: 2px solid  #716b8f;
-  border-top: 2px solid  #716b8f;
 }
 
 .correct {
   background-color: #1f883d;
+  border: 2px solid  #1d883d;
 }
 
 .semicorrect{
   background-color: #ffbf00;
+  border: 2px solid  #fdbf00;
 }
 
 .incorrect {
   background-color: #da3633;
+  border: 2px solid  #d63633;
 }
 
 .hidden {
