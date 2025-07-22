@@ -430,8 +430,7 @@ const row = document.createElement("tr");
     
     if(key === "bounty"){
       const img = document.createElement('img');
-      img.src = 'assets/berry.png';
-      img.alt = 'Berry';
+      img.src = 'assets/images/Berrysymbol.png';
       img.style.width = '1em';
       img.style.height = '1em';
       td.appendChild(img);
