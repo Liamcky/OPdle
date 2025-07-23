@@ -497,7 +497,7 @@ const row = document.createElement("tr");
     localStorage.setItem("score", score);
     scoreEl.textContent = score;
     search.placeholder = "🎉 Vollständig gelöst!";
-    reset();
+    resetGame();
   } 
   else if (countGuesses === maxGuesses){
     const span = document.createElement("span");
@@ -505,17 +505,18 @@ const row = document.createElement("tr");
     showtarget.appendChild(span);
     showtarget.showModal();
     scoreEl.textContent = 0;
-    if (highscore < score){
+    if (highscore < score)
+    {
       localStorage.setItem("highscore", score);
       highscoreEl.textContent = score;
     }
     localStorage.setItem("score", 0);
     search.placeholder = "Leider verloren!";
-    reset();
+    resetGame();
   }
 }
 
-function reset(){
+function resetGame(){
   search.disabled = true;
   const restartBtn = document.createElement("button");
   restartBtn.textContent = "🔁 Neues Spiel";
