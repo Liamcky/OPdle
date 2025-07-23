@@ -517,8 +517,8 @@ const row = document.createElement("tr");
     showtarget.appendChild(span);
     showtarget.showModal();
     
-    if(highscore < score)
-      localStorage.setItem("highscore", score;
+    if (highscore < score)
+      localStorage.setItem("highscore", score);
   }
 }
 
