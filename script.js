@@ -320,6 +320,8 @@ const scoreEl = document.getElementById("score");
 const highscoreEl = document.getElementById("highscore");
 const showtarget = document.getElementById("showtarget");
 const closeBtn = document.querySelector(".close");
+const table = document.getElementById("guessTable");
+const tbody = document.getElementById("guessBody");
 
 scoreEl.textContent = score;
 highscoreEl.textContent = highscore;
@@ -418,9 +420,6 @@ function getSagaByArc(arcValue) {
 
 function validateCharacter(guess) {
   roundcharacters = roundcharacters.filter(c => c.name !== guess.name);
-
-  const table = document.getElementById("guessTable");
-  const tbody = document.getElementById("guessBody");
 
 if (table.classList.contains("hidden")) {
   table.classList.remove("hidden"); // Nur beim ersten Treffer anzeigen
