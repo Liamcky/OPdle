@@ -321,6 +321,9 @@ const highscoreEl = document.getElementById("highscore");
 const showtarget = document.getElementById("showtarget");
 const closeBtn = document.querySelector(".close");
 
+scoreEl.textContent = score;
+highscoreEl.textContent = highscore;
+
 const attributeLabels = {
   name: "Name",
   crew: "Crew",
@@ -493,35 +496,43 @@ const row = document.createElement("tr");
     score += 1;
     localStorage.setItem("score", score);
     scoreEl.textContent = score;
-    highscoreEl.textContent = highscore;
-    search.disabled = true;
     search.placeholder = "🎉 Vollständig gelöst!";
-    const restartBtn = document.createElement("button");
-    restartBtn.textContent = "🔁 Neues Spiel";
-    restartBtn.addEventListener("click", () => {
-      search.disabled = false;
-      search.placeholder = "Charakter suchen...";
-      search.value = "";
-      tbody.innerHTML = "";
-      reset.innerHTML = "";
-      table.classList.add("hidden");
-      target = characters[Math.floor(Math.random() * characters.length)];
-      roundcharacters = characters;
-      countGuesses = 0;
-    });
-    reset.appendChild(restartBtn);
+    reset();
   } 
   else if (countGuesses === maxGuesses){
     const span = document.createElement("span");
     span.textContent = target.name;
     showtarget.appendChild(span);
     showtarget.showModal();
-    
-    if (highscore < score)
+    scoreEl.textContent = 0;
+    if (highscore < score){
       localStorage.setItem("highscore", score);
+      highscoreEl.textContent = score;
+    }
+    localStorage.setItem("score", 0);
+    search.placeholder = "Leider verloren!";
+    reset();
   }
 }
 
+function reset(){
+  search.disabled = true;
+  const restartBtn = document.createElement("button");
+  restartBtn.textContent = "🔁 Neues Spiel";
+  restartBtn.addEventListener("click", () => {
+  search.disabled = false;
+  search.placeholder = "Charakter suchen...";
+  search.value = "";
+  tbody.innerHTML = "";
+  reset.innerHTML = "";
+  table.classList.add("hidden");
+  target = characters[Math.floor(Math.random() * characters.length)];
+  roundcharacters = characters;
+  countGuesses = 0;
+    });
+  reset.appendChild(restartBtn);
+}
+  
 closeBtn.addEventListener("click", () => {
   showtarget.close();
 });
