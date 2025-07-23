@@ -89,7 +89,7 @@ th, td {
 }
 
 th {
-  width: 60px;
+  width: 65px;
   background-color: #21262d;
   color: #8b949e;
   border-radius: 6px;
@@ -98,8 +98,8 @@ th {
 }
 
 td {
-  width: 60px;
-  height: 60px;
+  width: 65px;
+  height: 65px;
   border-radius: 10px;
   font-size: 14px;
 }
