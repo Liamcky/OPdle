@@ -499,7 +499,7 @@ const row = document.createElement("tr");
     resetGame();
   } 
   else if (countGuesses === maxGuesses){
-    const span = document.createElement("span");
+    const span = document.getElementById("modalspan");
     span.textContent = target.name;
     showtarget.appendChild(span);
     showtarget.showModal();
