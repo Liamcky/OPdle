@@ -308,7 +308,7 @@
     "bounty": 12000000,
     "height": 1.86,
     "origin": 0,
-    "status": 2,
+    "status": 0,
     "race": 0
   },
   {
@@ -1029,7 +1029,7 @@
   {
     "name": "Karoo",
     "gender": 2,
-    "arc": 10,
+    "arc": 11,
     "devilfruit": 0,
     "crew": 34,
     "haki": 0,
