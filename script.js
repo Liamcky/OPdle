@@ -120,7 +120,9 @@ const Origin = Object.freeze({
   WEST_BLUE: 1,
   SOUTH_BLUE: 2,
   NORTH_BLUE: 3,
-  GRANDLINE: 4
+  GRANDLINE: 4,
+  SKY_ISLANDS: 5,
+  REDLINE: 6
 });
 
 const OriginName = Object.freeze({
@@ -128,7 +130,9 @@ const OriginName = Object.freeze({
   [Origin.WEST_BLUE]: "West Blue",
   [Origin.SOUTH_BLUE]: "South Blue",
   [Origin.NORTH_BLUE]: "North Blue",
-  [Origin.GRANDLINE]: "Grandline"
+  [Origin.GRANDLINE]: "Grandline",
+  [Origin.SKY_ISLANDS]: "Sky Islands",
+  [Origin.REDLINE]: "Redline"
 });
   
 const Saga = Object.freeze({
