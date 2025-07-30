@@ -70,7 +70,9 @@ const Crew = Object.freeze({
   DON_KRIEG_PIRATES: 33,
   NONE: 34,
   ALVIDA_PIRATES: 35,
-  BLIKING_PIRATES: 36
+  BLIKING_PIRATES: 36,
+  SHANDIA: 37,
+  GODSARMY: 38
 });
 
 const CrewName = Object.freeze({
@@ -111,7 +113,9 @@ const CrewName = Object.freeze({
   [Crew.DON_KRIEG_PIRATES]: "Don Krieg Pirates",
   [Crew.NONE]: "no crew",
   [Crew.ALVIDA_PIRATES]: "Alvida Pirates",
-  [Crew.BLIKING_PIRATES]: "Bliking Pirates"
+  [Crew.BLIKING_PIRATES]: "Bliking Pirates",
+  [Crew.SHANDIA]: "Shandia",
+  [Crew.GODSARMY]: "God's Army"
 });
 
 
