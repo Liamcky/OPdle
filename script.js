@@ -460,7 +460,7 @@ const row = document.createElement("tr");
         }
     else if (key === "crew"){
       const img = document.createElement("img");
-      const crewkey = Object.keys(Crew).find(k => Crew[k] === guessValue);
+      const crewkey = Object.keys(Crew).find(k => Crew[k] === guessValue)?.toLowerCase();
       const src = `assets/crews/${crewkey}.jpg`;
 
       img.onload = () => {
