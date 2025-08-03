@@ -336,15 +336,15 @@ highscoreEl.textContent = highscore;
 
 const attributeLabels = {
   name: "Name",
-  crew: "Crew",
-  bounty: "Bounty", 
-  devilfruit: "Devil Fruit",
+  crew: "Mannschaft",
+  bounty: "Kopfgeld", 
+  devilfruit: "Teufelsfrucht",
   haki: "Haki",
-  height: "Height",
-  gender: "Gender",
+  height: "Größe",
+  gender: "Geschlecht",
   status: "Status",
-  race: "Race",
-  origin: "Origin",
+  race: "Rasse",
+  origin: "Herkunft",
   arc: "Arc",
   saga: "Saga"
 };
@@ -458,6 +458,18 @@ const row = document.createElement("tr");
       td.appendChild(svg);
       td.append('', displayValue);
         }
+    else if (key === "crew"){
+      const img = document.createElement("img");
+      const src = `assets/crews/${crew}.jpg`;
+
+      img.onload = () => {
+        td.appendChild(img);
+        };
+      img.onerror = () => {
+        td.textContent = displayValue;
+        };
+      img.src = src;
+    }
     else{
       td.textContent = displayValue;
     }
