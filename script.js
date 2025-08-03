@@ -525,11 +525,7 @@ const row = document.createElement("tr");
     const img = document.getElementById("losegif");
     const rnumber = Math.floor(Math.random() * 10);
     const src = `assets/gifs/lose${rnumber}.gif`;
-    img.onload = () => {
-       img.src = src;
-      };
-    img.onerror = () => {
-      };
+    img.src = src;
     showtarget.showModal();
     scoreEl.textContent = 0;
     if (highscore < score)
