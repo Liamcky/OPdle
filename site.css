@@ -96,6 +96,7 @@ th {
   border-bottom: 2px solid  #30363d;
   border-top: 2px solid  #30363d;
   word-wrap: break-word;
+  hyphens: manual;
 }
 
 td {
