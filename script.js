@@ -523,6 +523,15 @@ const row = document.createElement("tr");
     const span = document.getElementById("modalspan");
     span.textContent = target.name;
     showtarget.appendChild(span);
+    const img = document.createElement("img");
+    const rnumber = Math.floor(Math.random() * 10);
+    const src = `assets/gifs/lose${rnumber}.gif`;
+    img.onload = () => {
+      showtarget.appendChild(img);
+      };
+    img.onerror = () => {
+      };
+    img.src = src;
     showtarget.showModal();
     scoreEl.textContent = 0;
     if (highscore < score)
