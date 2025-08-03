@@ -10,7 +10,7 @@ body {
 }
 
 .container {
-  max-width: 900px;
+  max-width: 950px;
   margin: auto;
   background-color: #161b22;
   padding: 20px;
@@ -42,7 +42,7 @@ input:focus {
 .dropdown {
   position: relative;
   display: inline-block;
-  max-width: 900px;
+  max-width: 950px;
   width: 100%;
 }
 
