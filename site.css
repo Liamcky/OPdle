@@ -95,6 +95,7 @@ th {
   border-radius: 6px;
   border-bottom: 2px solid  #30363d;
   border-top: 2px solid  #30363d;
+  word-wrap: break-word;
 }
 
 td {
