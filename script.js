@@ -460,8 +460,8 @@ const row = document.createElement("tr");
         }
     else if (key === "crew"){
       const img = document.createElement("img");
-      console.log(Crew, guessValue, Crew[guessValue]);
-      const src = `assets/crews/${Crew[guessValue]}.jpg`;
+      console.log(guessValue);
+      const src = `assets/crews/${guessValue}.jpg`;
 
       img.onload = () => {
         td.appendChild(img);
